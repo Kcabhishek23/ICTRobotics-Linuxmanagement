@@ -1,7 +1,7 @@
 # 2025-01-30
 - Abhishek KC, Kcabhishek23, amk1002865@student.hamk.fi
 
-### First Create the Tupu user using the adduser script:
+### Brief Description about Project:
 - I created users tupu and lupu using sudo adduser tupu and
 sudo useradd -m -d /home/lupu -s /bin/bash -G supu lupu.Passwords were set with sudo passwd.
 For sudo access, I edited the sudoers file with sudo visudo and added tupu
