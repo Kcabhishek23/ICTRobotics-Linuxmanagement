@@ -11,15 +11,15 @@
 
 ## Markdown examples
 
-# Bold
+**Bold**
 ```python 
 Bold Text: **Bold Text** → Bold Text
 ``` 
-# Italic
+*Italic*
 ```python 
 Italic Text: *Italic Text* → Italic Text
 ```
-# Bold and Italic
+***Bold and Italic***
 ```python
 Bold and Italic: ***Bold and Italic*** → Bold and Italic
 ```
@@ -39,6 +39,6 @@ echo "Hello, World!"
 | Ajit | 21 | Gulmi  |
 | Sanir  | 21 | Terathum     |
 ```
-#Images
+# Images
 ![Hamk Logo](image/FCB.jpg)
 
