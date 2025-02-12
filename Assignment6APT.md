@@ -1,5 +1,5 @@
-**Linux Assignment:6 Managing Packages with APT**
-# 2025-01-20
+# Linux Assignment:6 Managing Packages with APT**
+### 2025-01-20
 - Abhishek KC, Kcabhishek23, amk1002865@student.hamk.fi
 
 ## Obejctive of this assignment
@@ -50,7 +50,7 @@ By completing this assignment, I learn:
 ### Output:
 ![layer3](image/APT3.jpg)
 
-**Part 2: Installing & Managing Packages**
+# Part 2: Installing & Managing Packages
 ## 5. Search for a package using APT:
 ### Command:
 ```bash
@@ -79,7 +79,7 @@ By completing this assignment, I learn:
 ### Output:
 ![layer5](image/APT5.jpg)
 
-**Part 3: Removing & Cleaning Packages**
+# Part 3: Removing & Cleaning Packages
 ## 9. Uninstall the package:
 ### Command:
 ```bash
@@ -114,7 +114,7 @@ By completing this assignment, I learn:
 ### Why is this important?
 - It removes unused dependencies that were installed automatically but are no longer needed, freeing up disk space.
 
-**Part 4: Managing Repositories & Troubleshooting (15 min).**
+# Part 4: Managing Repositories & Troubleshooting (15 min).
 ## 13. List all APT repositories:
 ### Command:
 ```bash
@@ -152,7 +152,7 @@ By completing this assignment, I learn:
 3. Update the package list (sudo apt update).
 4. Search for the package (apt search fakepackage) to confirm its existence.
 
-**Bonus Challenge:**
+# Bonus Challenge:
 ## 1. Hold a package:
 ### Command:
 ```bash
