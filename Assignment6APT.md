@@ -1,4 +1,4 @@
-# Linux Assignment:6 Managing Packages with APT**
+# Linux Assignment:6 Managing Packages with APT
 ### 2025-01-20
 - Abhishek KC, Kcabhishek23, amk1002865@student.hamk.fi
 
