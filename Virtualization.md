@@ -1,4 +1,4 @@
-# 2025-01-30
+# 2025-02-19
 - Abhishek KC, Kcabhishek23, amk1002865@student.hamk.fi
 
 ## Part 1: Introduction to virtualization concepts
@@ -134,7 +134,73 @@ A container is a lightweight, portable environment that packages an application 
   ```
 #### 3. Inside the instance, you can now access /mnt/shared.
 ```bash
-  multipass shell <instance-name>
-  ls /mnt/shared
+  multipass shell <instance-name> ls /mnt/shared
   ```
 ![layer4](image/virtu5.jpg)
+
+###  Part 3: Exploring LXD
+- LXD is a tool that helps you manage containers and virtual machines on your Linux system. Think of it as a "manager" for lightweight, isolated environments (containers) and full virtual machines (VMs) that run on your computer.
+***Key Features of LXD:***
+1. Manages both containers and virtual machines.
+2. Provides a unified API for managing instances.
+3. Offers advanced features like snapshots, live migration, and resource limits.
+4. Built on top of LXC (Linux Containers) for better performance and security.
+
+#### 1. Update your system:
+```bash
+  sudo apt update
+  sudo apt upgrade -y
+  ```
+#### 2. Install LXD:
+```bash
+  sudo snap install lxd
+  ```
+#### 3. Verify the Installation:
+```bash
+  lxd --version
+  ```
+***Image of 1 to 3***
+![layer6](image/virtu6.jpg)
+
+#### 4. Create a New Container and List it
+```bash
+  lxc launch ubuntu:24.04 <container-name>
+  lxc list
+  ```
+#### 5. Start and Stop the Container
+```bash
+  lxc stop <container-name>
+  lxc list
+  ```
+#### 6. Delete the container
+```bash
+  lxc delete <container-name>
+  lxc list
+  ```
+***Image of 4 to 6***
+![layer7](image/virtu7.jpg)
+
+###  Part 5: Snaps for Self-Contained Applications
+
+#### 1. Install Snapd
+```bash
+  sudo apt install snapd
+  ```
+#### 2. Install Snapcraft:
+```bash
+  sudo snap install snapcraft --classic
+  ```
+#### 3. Verify Installation:
+```bash
+  snapcraft --version
+  ```
+***Image of 1 to 3***
+![layer7](image/virtu8.jpg)
+
+#### 5.1. Create a Simple Snap:
+- Let’s create a simple snap for a basic application. For this example, we’ll use a "Hello World" Python script.
+
+#### 1. Create a Project Directory:
+```bash
+  snapcraft --version
+  ```
