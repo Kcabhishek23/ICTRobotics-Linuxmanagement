@@ -279,6 +279,8 @@ A container is a lightweight, portable environment that packages an application 
     my-snapcraft.hello
 
 🔥 And You should see the output:
-    Hello, Snap!
+   ```bash
+  Hello, Snap!
+  ```
 
 ![layer14](image/virtu14.jpg)
