@@ -272,7 +272,13 @@ A container is a lightweight, portable environment that packages an application 
 #### 7. Build the snap package:
     snapcraft
 
-### ⚠️ Faced Problem in running snapcraft
-- I created the 'hello, snap' code in Nano and tried to run Snapcraft, but I kept facing one problem after another. I tried multiple solutions, but none of them worked as expected. So, I have no choice but to seek help from you.
+#### 8. Install and run your snap:
+    sudo snap install my-snapcraft_1.0_amd64.snap --dangerous
 
+#### 9. Now, run your Snap:
+    my-snapcraft.hello
 
+🔥 And You should see the output:
+    Hello, Snap!
+
+![layer14](image/virtu14.jpg)
