@@ -180,6 +180,34 @@ A container is a lightweight, portable environment that packages an application 
 ***Image of 4 to 6***
 ![layer7](image/virtu7.jpg)
 
+###  Part 4: Part 4: How to Stick Apps with Docker
+
+#### 1. Install Docker Engine
+```bash
+  sudo apt update
+  sudo apt install docker-ce docker-ce-cli containerd.io -y
+  ```
+#### 2. Verify Installation, Check Docker version
+```bash
+  docker --version
+  ```
+![layer8](image/virtu9.jpg)
+
+#### 3. Making directory and Creating nano file in docker
+```bash
+  mkdir myapp
+  cd myapp
+  echo "hello world" > index.html
+  ```
+![layer9](image/virtu10.jpg)
+
+#### 4. Build Docker
+```bash
+  sudo docker build -t my-nginx
+  sudo docker ps
+  ```
+![layer10](image/virtu11.jpg)
+
 ###  Part 5: Snaps for Self-Contained Applications
 
 #### 1. Install Snapd
@@ -195,12 +223,56 @@ A container is a lightweight, portable environment that packages an application 
   snapcraft --version
   ```
 ***Image of 1 to 3***
-![layer7](image/virtu8.jpg)
+![layer11](image/virtu8.jpg)
 
-#### 5.1. Create a Simple Snap:
-- Let’s create a simple snap for a basic application. For this example, we’ll use a "Hello World" Python script.
+### 🚀 Simple Snapcraft Application
+- Let’s create a simple snap for a basic application. For this example, we’ll use a "Hello, Snap" Python script.
 
-#### 1. Create a Project Directory:
-```bash
-  snapcraft --version
-  ```
+#### 1. Set Up the Project Directory
+    mkdir my-snapcraft  
+    cd my-snapcraft  
+
+#### 2. Create the Application Script
+    mkdir bin  
+    nano bin/hello-snap  
+
+#### 3. Paste the following content into hello-snap:
+    #!/bin/bash
+    echo "Hello, Snap!"
+
+#### 4. Make the script executable:
+    chmod +x bin/hello-snap  
+
+![layer12](image/virtu12.jpg)
+
+#### 5. Define the Snapcraft Configuration
+    nano snapcraft.yaml  
+
+#### 6. Add the following configuration:
+    name: my-snapcraft
+    base: core22
+    version: "1.0"
+    summary: "A simple Snapcraft app"
+    description: "This is a simple Snap application that prints Hello, Snap!"
+
+    grade: stable
+    confinement: strict
+
+    apps:
+   hello:
+   command: bin/hello-snap
+
+   parts:
+   hello:
+   plugin: dump
+   source: .
+
+![layer13](image/virtu13.jpg)
+
+#### 7. Build the snap package:
+    snapcraft
+
+### ⚠️ Faced Problem in running snapcraft
+- I created the 'hello, snap' code in Nano and tried to run Snapcraft, but I kept facing one problem after another. I tried multiple solutions, but none of them worked as expected. So, I have no choice but to seek help from you.
+
+
