@@ -259,13 +259,13 @@ A container is a lightweight, portable environment that packages an application 
     confinement: strict
 
     apps:
-   hello:
-   command: bin/hello-snap
+    hello:
+    command: bin/hello-snap
 
-   parts:
-   hello:
-   plugin: dump
-   source: .
+    parts:
+    hello:
+    plugin: dump
+    source: .
 
 ![layer13](image/virtu13.jpg)
 
