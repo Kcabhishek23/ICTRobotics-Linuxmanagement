@@ -2,7 +2,7 @@
 ### 2025-01-03
 - Abhishek KC, Kcabhishek23, amk1002865@student.hamk.fi
 
-**🚀 Introduction**
+## 🚀 Introduction
 
 This document explains how to configure a Linux server firewall using UFW (Uncomplicated Firewall) to protect server services and prevent common network attacks. The firewall will allow necessary services such as OpenSSH, HTTP, and HTTPS while logging all blocked and allowed connections. Additionally, it will implement protections against common attacks like SYN floods and ICMP floods.
 
@@ -23,6 +23,7 @@ This document explains how to configure a Linux server firewall using UFW (Uncom
 ![layer2](image/firewall2.jpg)
 
 #### Step 4: SSH Server Security
+
 Why?
 - SSH (Secure Shell) is used for remote server management, but open SSH ports are common attack vectors.
         # Implementation:
@@ -35,6 +36,7 @@ Why?
 ![layer3](image/firewall3.jpg)
 
 #### Step 5: Web Server (HTTP/HTTPS) Rules
+
 Why?
 - Web servers need to accept incoming HTTP and HTTPS traffic for website access.
         # Allow HTTP (port 80)
@@ -46,6 +48,7 @@ Why?
 ![layer4](image/firewall4.jpg)
 
 #### Step 6: Logging Configuration
+
 Why?
 - Logging helps in monitoring traffic, debugging issues, and detecting potential attacks.
         # Enable UFW logging
@@ -59,6 +62,7 @@ Why?
 
 #### Step 7: Protection Against Common Attacks 
 ***1. SYN Flood Protection***
+
 Why?
 - A SYN flood attack exploits the TCP handshake to exhaust server resources.
 
@@ -86,6 +90,7 @@ Why?
 ![layer6](image/firewall6.jpg)
 
 ***2. Block invalid packets***
+
 Why?
 - Malicious users send malformed packets to evade detection and exploit vulnerabilities.
 - In a standard TCP Three-Way Handshake, every new connection begins with a SYN packet.
@@ -99,6 +104,7 @@ Why?
         -A ufw-before-input -p tcp -m tcp ! --tcp-flags FIN,SYN,RST,ACK SYN -m conntrack --ctstate NEW -j DROP
 
 ***3. Blocking Ping (ICMP) Requests***
+
 Why?
 - An ICMP flood attack, also known as a ping flood, is a type of Denial of Service (DoS) attack. It overwhelms a system by sending a huge number of ICMP packets, specifically echo requests (pings).
 
@@ -130,6 +136,7 @@ Why?
         sudo ufw reload
 
 #### Step 8: Verification and Monitoring
+
 Why?
 - To ensure rules are active and logging is working correctly.
 
