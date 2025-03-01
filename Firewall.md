@@ -1,5 +1,5 @@
 # Linux Server Firewall Configuration
-### 2025-01-03
+### 2025-03-01
 - Abhishek KC, Kcabhishek23, amk1002865@student.hamk.fi
 
 ## 🚀 Introduction
