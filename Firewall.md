@@ -58,9 +58,12 @@ Why?
 - A SYN flood attack exploits the TCP handshake to exhaust server resources.
 
 - Add the following to
-        sudo nano /etc/sysctl.conf
+ ```bash
+sudo nano /etc/sysctl.conf
+```
 
 - And add these items
+ ```bash
         net.ipv4.tcp_syncookies = 1
         net.ipv4.tcp_max_syn_backlog = 2048
         net.ipv4.tcp_synack_retries = 2
@@ -68,9 +71,13 @@ Why?
         net.ipv4.tcp_ecn = 0
         net.ipv4.tcp_wmem = 4096 87380 8388608
         ipv4.tcp_rmem = 4096 87380 8388608
+```
 
 - Finally, Apply the changes
+```bash
         sudo sysctl -p
+```
+
 ![layer6](image/firewall6.jpg)
 
 ***2. Block invalid packets***
