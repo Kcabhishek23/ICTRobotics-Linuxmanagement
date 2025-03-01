@@ -3,6 +3,7 @@
 - Abhishek KC, Kcabhishek23, amk1002865@student.hamk.fi
 
 **🚀 Introduction**
+
 This document explains how to configure a Linux server firewall using UFW (Uncomplicated Firewall) to protect server services and prevent common network attacks. The firewall will allow necessary services such as OpenSSH, HTTP, and HTTPS while logging all blocked and allowed connections. Additionally, it will implement protections against common attacks like SYN floods and ICMP floods.
 
 #### Step 1: Install UFW (Uncomplicated Firewall)
@@ -11,12 +12,14 @@ This document explains how to configure a Linux server firewall using UFW (Uncom
 #### Step 2: Enable UFW on system start
         sudo systemctl enable ufw
         sudo ufw enable
+
 ![layer1](image/firewall1.jpg)
 
 #### Step 3: Prevent Common Attacks (Default Policies)
         # Set default policies to deny incoming and allow outgoing
         sudo ufw default deny incoming
         sudo ufw default allow outgoing
+
 ![layer2](image/firewall2.jpg)
 
 #### Step 4: SSH Server Security
@@ -28,6 +31,7 @@ Why?
 
         # Enable rate limiting to prevent brute-force attacks
         sudo ufw limit ssh comment 'Rate limit SSH connections'
+
 ![layer3](image/firewall3.jpg)
 
 #### Step 5: Web Server (HTTP/HTTPS) Rules
@@ -38,6 +42,7 @@ Why?
 
         # Allow HTTPS (port 443)
         sudo ufw allow 443/tcp
+
 ![layer4](image/firewall4.jpg)
 
 #### Step 6: Logging Configuration
@@ -59,7 +64,7 @@ Why?
 
 - Add the following to
  ```bash
-sudo nano /etc/sysctl.conf
+        sudo nano /etc/sysctl.conf
 ```
 
 - And add these items
