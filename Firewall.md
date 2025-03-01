@@ -133,7 +133,9 @@ Why?
 ![layer7](image/firewall7.jpg)
 
 🔄 Reload UFW to Apply change
+```bash
         sudo ufw reload
+```
 
 #### Step 8: Verification and Monitoring
 
